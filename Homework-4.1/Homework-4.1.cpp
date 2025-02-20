@@ -97,12 +97,10 @@ int main()
     in.close();
     ofstream out("C:/Users/bugr2/source/repos/Homework-4.1/Homework-4.1/folder/out.txt");
 
-    for (int i = num - 1; num >= 0; num--) {
+    for (int i = num - 1; i >= 0; i--) {
         Adress fullAdress = arr[i];
         out << fullAdress.printAdress() << endl;
     }
-
-    delete arr;
     out.close();
 
 }
