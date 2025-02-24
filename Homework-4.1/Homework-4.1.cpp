@@ -25,7 +25,7 @@ public:
     }
     
     string getCity() {
-        return city;
+        return this->city;
     }
 
     void setCity(string aCity) {
@@ -33,7 +33,7 @@ public:
     }
 
     string getStreet() {
-        return street;
+        return this->street;
     }
 
     void setStreet(string aStreet) {
@@ -77,29 +77,25 @@ int main()
     Adress *arr = new Adress[num];
 
     for (int i = 0; i < num; i++) { 
-        Adress adr;
         string city;
         in >> city;
-        adr.setCity(city);
+        arr[i].setCity(city);
         string street;
         in >> street;
-        adr.setStreet(street);
+        arr[i].setStreet(street);
         int dom;
         in >> dom;
-        adr.setDom(dom);
+        arr[i].setDom(dom);
         int room;
         in >> room;
-        adr.setRoom(room);
-        arr[i] = adr;
-        
+        arr[i].setRoom(room);
     }
 
     in.close();
     ofstream out("C:/Users/bugr2/source/repos/Homework-4.1/Homework-4.1/folder/out.txt");
 
     for (int i = num - 1; i >= 0; i--) {
-        Adress fullAdress = arr[i];
-        out << fullAdress.printAdress() << endl;
+        out << arr[i].printAdress() << endl;
     }
     out.close();
 
