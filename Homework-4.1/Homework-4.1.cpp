@@ -97,6 +97,7 @@ int main()
     for (int i = num - 1; i >= 0; i--) {
         out << arr[i].printAdress() << endl;
     }
+    delete[] arr;
     out.close();
 
 }
